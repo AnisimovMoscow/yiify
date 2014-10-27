@@ -14,7 +14,7 @@ class m141022_141756_create_user_table extends Migration
         ]);
         $this->insert('user', [
             'username' => 'admin',
-            'hash' => '$2y$13$9kGgt6w2vEYysj9fju4CpOr5spwV95oudViHPd7NZWEsVjInv.z6e'
+            'hash' => Yii::$app->getSecurity()->generatePasswordHash('admin')
         ]);
     }
 
